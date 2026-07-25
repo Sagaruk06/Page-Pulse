@@ -1,0 +1,14 @@
+{
+  "name": "page-pulse-task-b",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Page Pulse - Task B: Tests and Documentation",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  }
+}

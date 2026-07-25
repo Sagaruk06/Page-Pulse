@@ -1,0 +1,92 @@
+/* ------------------------------------------------------------------ */
+/*  URL Input form                                                     */
+/* ------------------------------------------------------------------ */
+
+.url-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+.url-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.url-input-group input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 15px;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.url-input-group input:focus {
+  border-color: var(--primary);
+}
+
+.url-input-group button {
+  padding: 10px 24px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.url-input-group button:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.url-input-group button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.field-error {
+  color: var(--error);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Loading spinner --------------------------------------------------- */
+
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive ------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .url-input-group {
+    flex-direction: column;
+  }
+  .url-input-group button {
+    justify-content: center;
+  }
+}

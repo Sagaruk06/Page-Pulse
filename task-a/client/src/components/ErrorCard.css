@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------------ */
+/*  Error card                                                         */
+/* ------------------------------------------------------------------ */
+
+.error-card {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+[data-theme='dark'] .error-card {
+  background: #450a0a;
+  border-color: #7f1d1d;
+}
+
+.error-card .error-title {
+  font-weight: 600;
+  color: var(--error);
+  margin-bottom: 4px;
+}
+
+.error-card .error-detail {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
