@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: page-pulse-api
+    env: node
+    region: oregon
+    plan: free
+    rootDir: task-a/server
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3001"
+      - key: CORS_ORIGIN
+        value: https://page-pulse-roan-two.vercel.app
+      - key: RATE_LIMIT_MAX
+        value: "60"
